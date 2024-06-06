@@ -8,24 +8,22 @@
 </head>
 <body>
     <div class="container">
-        <div class="row align-items-md-stretch m-5">
-            <div class="col-md-6 border-end">
-              <div class="p-3 text-center">
-                <div>
+        <div class="row align-items-center m-5">
+            <div class="col-md-6 border-end d-flex justify-content-end">
+                <div class="text-center">
                     <img src="{{asset('images/logo.png')}}" width="50%" alt="">
                     <p class="slate-light small">kayondobodaloans.limited</p>
                 </div>
-              </div>
             </div>
             <div class="col-md-6">
                 <div class="col-md-8">
-                @isset($header)
-                    {{$header}}
-                @endisset
-                {{$slot}}
+                    @isset($header)
+                        {{$header}}
+                    @endisset
+                    {{$slot}}
                 </div>
             </div>
-          </div>
+        </div>
     </div>
 </body>
 </html>

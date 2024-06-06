@@ -7,6 +7,7 @@
     <meta name="generator" content="Hugo 0.122.0">
     <title>KayondoBodaLoans.ltd</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @livewireStyles
   </head>
 <body>
 
@@ -16,7 +17,7 @@
     </symbol>
 </svg>
 
-<header class="navbar sticky-top flex-md-nowrap p-0 shadow">
+<header class="navbar sticky-top flex-md-nowrap p-0 shadow bg-white">
   <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6 slate" href="#">kayondobodaloans</a>
   <ul class="navbar-nav flex-row d-md-none">
     <li class="nav-item text-nowrap">
@@ -80,5 +81,7 @@
     </main>
   </div>
 </div>
+
+@livewireScripts
 </body>
 </html>
