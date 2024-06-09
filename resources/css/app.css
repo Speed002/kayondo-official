@@ -26,7 +26,12 @@ a{
     height: 1rem;
     vertical-align: -.125em;
     fill: black;
-  }
+}
+
+.list-group-item:hover{
+    background-color: rgb(235, 232, 232);
+    cursor: pointer;
+}
 
 @media (min-width: 768px) {
     .sidebar .offcanvas-lg {

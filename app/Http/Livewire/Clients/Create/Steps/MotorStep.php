@@ -15,7 +15,7 @@ class MotorStep extends StepComponent
     public $chasis;
     public $engine;
     public $condition;
-    public $rnames;
+    public $registered_names;
 
     protected $rules = [
         'type' => 'required',
@@ -25,12 +25,12 @@ class MotorStep extends StepComponent
         'chasis' => 'required',
         'engine' => 'required',
         'condition' => 'required',
-        'rnames' => 'required'
+        'registered_names' => 'required'
     ];
 
     public function submit(){
         $this->validate();
-
+        sleep(3);
         $this->nextStep();
     }
     public function render()

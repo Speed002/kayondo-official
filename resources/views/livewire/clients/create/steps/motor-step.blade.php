@@ -54,15 +54,15 @@
             <div class="col-md-4">
             <label for="exampleFormControlInput1" class="form-label slate-light">Condition (New or Old)</label>
             <input type="text" wire:model="condition" class="form-control" name="condition" id="condition" value="{{old('condition')}}" placeholder="eg. New">
-            @error('stage')
+            @error('condition')
                 <small class="text-danger text-xs">{{$message}}</small>
             @enderror
             </div>
 
             <div class="col-md-4">
             <label for="exampleFormControlInput1" class="form-label slate-light">Registered names</label>
-            <input type="text" wire:model="rnames" class="form-control" name="rnames" id="rnames" value="{{old('rnames')}}" placeholder="eg. Registered names">
-            @error('rnames')
+            <input type="text" wire:model="registered_names" class="form-control" name="registered_names" id="registered_names" value="{{old('registered_names')}}" placeholder="eg. Registered names">
+            @error('registered_names')
                 <small class="text-danger text-xs">{{$message}}</small>
             @enderror
             </div>
@@ -72,7 +72,14 @@
                 <button wire:click="previousStep" class="btn btn-light slate-light" type="button">Previous</button>
             </div>
             <div class="mb-3">
-                <button class="btn btn-light slate-light" type="submit">Next</button>
+                <button class="btn btn-light slate-light" type="submit">
+                    <span wire:loading.delay.long>
+                        Loading ...
+                    </span>
+                    <span wire:loading.remove.delay.long>
+                        Next
+                    </span>
+                </button>
             </div>
         </div>
 

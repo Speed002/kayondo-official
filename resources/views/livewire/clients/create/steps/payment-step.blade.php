@@ -21,7 +21,7 @@
 
             <div class="col-md-4">
             <label for="exampleFormControlInput1" class="form-label slate-light">Agreed months</label>
-            <input type="number" wire:model="agreed_months" class="form-control" name="agreed_months" id="agreed_months" value="{{old('agreed_months')}}">
+            <input type="number" wire:model="agreed_months" class="form-control" name="agreed_months" id="agreed_months" value="{{old('agreed_months')}}" placeholder="eg. 123">
             @error('agreed_months')
                 <small class="text-danger text-xs">{{$message}}</small>
             @enderror
@@ -64,7 +64,14 @@
                 <button wire:click="previousStep" class="btn btn-light slate-light" type="button">Previous</button>
             </div>
             <div class="mb-3">
-                <button class="btn btn-light slate-light" type="submit">Next</button>
+                <button class="btn btn-light slate-light" type="submit">
+                    <span wire:loading.delay.long>
+                        Loading ...
+                    </span>
+                    <span wire:loading.remove.delay.long>
+                        Next
+                    </span>
+                </button>
             </div>
         </div>
 

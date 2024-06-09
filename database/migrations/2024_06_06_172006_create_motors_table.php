@@ -23,7 +23,7 @@ return new class extends Migration
             $table->string('engine');
             $table->string('chasis');
             $table->string('condition');
-            $table->string('registered_name');
+            $table->string('registered_names');
             $table->timestamps();
         });
     }

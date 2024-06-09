@@ -21,8 +21,8 @@ return new class extends Migration
             $table->string('agreed_months');
             $table->string('total_weeks');
             $table->string('selling_price');
-            $table->string('dosw');
-            $table->string('poa');
+            $table->string('starting_week');
+            $table->string('agreement_place');
             $table->timestamps();
         });
     }

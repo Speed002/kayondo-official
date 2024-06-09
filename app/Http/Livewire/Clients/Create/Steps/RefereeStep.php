@@ -34,7 +34,7 @@ class RefereeStep extends StepComponent
 
     public function submit(){
         $this->validate();
-        dd($this->state());
+        sleep(3);
         $this->nextStep();
     }
     public function render()
