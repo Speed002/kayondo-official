@@ -89,7 +89,14 @@
                 <button wire:click="previousStep" class="btn btn-light slate-light" type="button">Previous</button>
             </div>
             <div class="mb-3">
-                <button class="btn btn-light slate-light" type="submit">Save client</button>
+                <button class="btn btn-light slate-light" type="submit">
+                    <span wire:loading.delay.long>
+                        Loading ...
+                    </span>
+                    <span wire:loading.remove.delay.long>
+                        Next
+                    </span>
+                </button>
             </div>
         </div>
 

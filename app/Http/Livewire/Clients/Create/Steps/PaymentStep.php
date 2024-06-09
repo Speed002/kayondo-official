@@ -27,7 +27,7 @@ class PaymentStep extends StepComponent
 
     public function submit(){
         $this->validate();
-
+        sleep(3);
         $this->nextStep();
     }
 

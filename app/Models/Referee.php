@@ -9,15 +9,16 @@ class Referee extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'referee1name',
-        'referee1relation',
-        'referee1contact',
-        'referee2name',
-        'referee2relation',
-        'referee2contact',
-        'st_chairname',
-        'st_chaircontact',
-        'lc_chairname',
-        'lc_chaircontact',
+        'client_id',
+        'referee1_name',
+        'referee1_relationship',
+        'referee1_contact',
+        'referee2_name',
+        'referee2_relationship',
+        'referee2_contact',
+        'st_chair_name',
+        'st_chair_contact',
+        'lc_chair_name',
+        'lc_chair_contact',
     ];
 }

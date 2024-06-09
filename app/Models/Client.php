@@ -2,8 +2,11 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\Motor;
+use App\Models\Payment;
+use App\Models\Referee;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Client extends Model
 {
@@ -25,12 +28,12 @@ class Client extends Model
 
 
     public function motor(){
-        return $this->hasMany(Motor::class);
+        return $this->hasOne(Motor::class);
     }
     public function payment(){
-        return $this->hasMany(Payment::class);
+        return $this->hasOne(Payment::class);
     }
     public function referee(){
-        return $this->hasMany(Referee::class);
+        return $this->hasOne(Referee::class);
     }
 }

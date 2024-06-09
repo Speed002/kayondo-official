@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire\Clients\Create;
 
+use App\Http\Livewire\Clients\Create\Steps\FinalStep;
 use App\Http\Livewire\Clients\Create\Steps\MotorStep;
 use App\Http\Livewire\Clients\Create\Steps\PaymentStep;
 use Spatie\LivewireWizard\Components\WizardComponent;
@@ -16,7 +17,8 @@ class CreateClient extends WizardComponent
             PersonalStep::class,
             MotorStep::class,
             PaymentStep::class,
-            RefereeStep::class
+            RefereeStep::class,
+            FinalStep::class
         ];
     }
 }

@@ -16,16 +16,16 @@ return new class extends Migration
         Schema::create('referees', function (Blueprint $table) {
             $table->id();
             $table->foreignId('client_id')->constrained();
-            $table->string('referee1name');
-            $table->string('referee1relation');
-            $table->string('referee1contact');
-            $table->string('referee2name');
-            $table->string('referee2relation');
-            $table->string('referee2contact');
-            $table->string('st_chairname');
-            $table->string('st_chaircontact');
-            $table->string('lc_chairname');
-            $table->string('lc_chaircontact');
+            $table->string('referee1_name');
+            $table->string('referee1_relationship');
+            $table->string('referee1_contact');
+            $table->string('referee2_name');
+            $table->string('referee2_relationship');
+            $table->string('referee2_contact');
+            $table->string('st_chair_name');
+            $table->string('st_chair_contact');
+            $table->string('lc_chair_name');
+            $table->string('lc_chair_contact');
             $table->timestamps();
         });
     }

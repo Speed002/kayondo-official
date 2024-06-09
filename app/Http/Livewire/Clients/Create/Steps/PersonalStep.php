@@ -2,14 +2,12 @@
 
 namespace App\Http\Livewire\Clients\Create\Steps;
 
-use Livewire\Component;
-use Illuminate\Validation\Rules;
-use Spatie\CollectionMacros\Macros\Validate;
+use Illuminate\Validation\Rule;
 use Spatie\LivewireWizard\Components\StepComponent;
 
 class PersonalStep extends StepComponent
 {
-
+    // #[Rule('required')]
     public $name;
     public $dob;
     public $contact;
@@ -40,7 +38,7 @@ class PersonalStep extends StepComponent
 
     public function submit(){
         $this->validate();
-
+        sleep(3);
         $this->nextStep();
     }
     public function render()

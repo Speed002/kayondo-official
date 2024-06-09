@@ -10,6 +10,7 @@ class Motor extends Model
     use HasFactory;
 
     protected $fillable = [
+        'client_id',
         'type',
         'make',
         'registration',
@@ -19,5 +20,10 @@ class Motor extends Model
         'condition',
         'registered_names'
     ];
+
+    public function client()
+    {
+        return $this->belongsTo(Client::class);
+    }
 
 }

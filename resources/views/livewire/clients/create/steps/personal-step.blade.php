@@ -1,11 +1,14 @@
 <div>
+    @if (session('status'))
+        <p class="text-success">Successfully created new client.</p>
+    @endif
     <p class="slate">Creating New client</p>
     <p class="slate-light">Personal information</p>
         <form wire:submit.prevent='submit'>
             <div class="mb-3 row g-3">
             <div class="col-md-4 ">
                 <label for="exampleFormControlInput1" class="form-label slate-light">Name</label>
-                <input type="text" wire:model="name" class="form-control" name="name" id="name" value="{{old('name')}}" placeholder="eg. John Doe">
+                <input type="text" wire:model.live="name" class="form-control" name="name" id="name" value="{{old('name')}}" placeholder="eg. John Doe">
                 @error('name')
                     <small class="text-danger text-xs">{{$message}}</small>
                 @enderror
@@ -105,7 +108,16 @@
             </div>
 
             <div class="mb-3">
-                <button class="btn btn-light slate-light" type="submit">Next</button>
+                <button class="btn btn-light slate-light" type="submit">
+                    <span wire:loading.delay.long>
+                        Loading ...
+                    </span>
+                    <span wire:loading.remove.delay.long>
+                        Next
+                    </span>
+                </button>
             </div>
         </form>
+
 </div>
+
